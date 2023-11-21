@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+<div class="container">
+  <div class="left-side">
+    <div id="cardFront" class="animation-front-card">
+      <img src="images/card-logo.svg" alt="">
+      <span id="cardNumber">0000 0000 0000 0000</span>
+      <div class="card-details">
+        <span id="cardOwnerName">Jane Appleseed</span>
+        <span id="cardDate"><span id="cardMonth">00</span>/<span id="cardYear">00</span></span>
+      </div>
+    </div>
+    
+    <div id="cardBack" class="animation-back-card">
+      <span id="backCardNumber">000</span>
+    </div>
+  </div>
+    
+  <div class="form-container animation-class">
+
+    <form action="" autocomplete="off">
+      <label for="cardHolderInput" id="cardHolderLabel">Cardholder Name</label>
+      <input type="text" id="cardHolderInput" placeholder="e.g. Jane Appleseed"> 
+      <label class="error" for="cardHolderInput" id="cardHolderError"></label>
+
+      <label for="cardNumberInput" id="cardNumberLabel">Card Number</label>
+      <input type="text" id="cardNumberInput" placeholder="e.g. 1234 5678 9123 0000" maxlength="28"> 
+      <label class="error" for="cardNumberInput" id="cardNumberError"></label>
+      <div class="card-details-inputs-container">
+        <div class="exp-date-container">
+        <label for="cardExpMMInput" id="cardExpLabel">Exp. Date (MM/YY)</label>
+        <div class="inputs-dates-container">
+          <input maxlength="2" type="number" id="cardExpMMInput" placeholder="MM"> 
+          <input maxlength="2" type="number" id="cardExpYYInput" placeholder="YY"> 
+          <label class="error" for="cardExpYYInput" id="cardExpError"></label>
+          <label class="error" for="cardExpMMInput" id="cardMMError"></label>
+        </div>
+        
+      </div>
+
+      <div class="card-cvc-container">
+        <label for="cardCvcInput" id="cardCvcLabel">CVC</label>
+        <input maxlength="3" type="number" id="cardCvcInput" placeholder="e.g. 123">
+        <label class="error" for="cardCvcInput" id="cardCvcError"></label>
+      </div>
+      </div>
+
+    </form>
+    <button id="confirmBtn">Confirm</button>
+  </div>
+    <!-- Completed state start -->
+    <div id="completeSection" class="complete-section hidden animation-complete-section">
+      <img src="images/icon-complete.svg" alt="">
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <button id="continueBtn">Continue</button>
+    </div>
+    
+</div>
+<script src="app.js"></script>
+</body>
+</html>
